@@ -18,6 +18,14 @@ fun append (x : int list, y : int list) =
     if null x
     then y
     else (hd x) :: append((tl x), y)
+    
+(*
+fun factorial (n : int)= 
+    if n = 0
+    then 1\
+    else n ∗ factorial(n − 1)
+The shorter way of writing this out using helper functions is shown just after this comment:
+*)
 
 fun factorial (n : int) = list_product(countdown(n))
 			 
