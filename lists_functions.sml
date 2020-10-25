@@ -36,3 +36,5 @@ fun seconds (x : (int * int) list) =
     then []
     else (#2 (hd x)) :: seconds(tl xs)
 	    
+fun sum_pair_list2 (x : (int * int) list) = 
+    (sum_list(firstsx)) + (sum_list(seconds x))
