@@ -31,5 +31,8 @@ fun firsts (x : (int * int) list) =
     then []
     else (#1 (hd x)) :: firsts(tl xs)	  
 
-
+fun seconds (x : (int * int) list) =
+    if null x
+    then []
+    else (#2 (hd x)) :: seconds(tl xs)
 	    
