@@ -22,3 +22,7 @@ fun number_in_month (n : (int * int * int) list, month : int) =
 								   
 (*If the month of the head date is equal to month that is to be compared with, then we add 1 and recall the function number_in_month. If not, then we recall number_in_month recursively without adding 1 to it. Finally for a null situation, the process returns 0.*)
 								   
+fun number_in_months (dates : (int * int * int) list, months : int list) =
+    if null months
+    then 0
+    else number_in_month (dates, hd months) + number_in_months (dates, tl months)
